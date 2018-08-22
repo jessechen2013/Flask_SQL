@@ -1,0 +1,4 @@
+NameError: global name 'DATABASE_URI' is not defined
+
+OperationalError: (_mysql_exceptions.OperationalError) (1049, "Unknown database 'friendsdbs'") (Background on this error at: http://sqlalche.me/e/e3q8)
+

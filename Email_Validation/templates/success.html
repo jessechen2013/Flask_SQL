@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Emails Entered:</h1>
+	<hr>
+  <!-- with all the data we can then construct a more structured output -->
+  {% for email in all_emails: %}
+     <p>{{ email['email'] }}  {{ email['created_at']}}</p>
+  {% endfor %}
+</body>
+</html>

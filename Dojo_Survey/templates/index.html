@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='dojo.css')}}">
+</head>
+<body>
+	{% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-danger" role="alert">
+  			<strong>Oh snap!</strong> <p>{{message}}</pcopy>
+  			<form action='/reload' method="post">
+      		<input class="btn btn-success" type="submit" name="go_back" value="Go Back"></div>
+    		</form>
+			</div>  
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+	<form action='/result' method="post">
+		<div class="form-group">
+			<label for="email">Name: </label><input class="form-control" type="text" name="name"></div>
+			<div class="form-group">
+		<label for="email">Location: </label><input class="form-control" type="text" name="location"></div>
+			<div class="form-group">
+			<label for="email">Favorite language: </label></spam><input class="form-control" type="text" name="language"></div>
+			<div class="form-group">
+			<label for="email">Comment: </label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comment"></textarea></div>
+			<div class="form-group">
+			<input class="btn btn-primary" type="submit" name="submit"></div>
+	</form>
+</body>
+</html>

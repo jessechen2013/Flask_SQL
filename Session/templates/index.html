@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+</head>
+<body>
+	<h1>Counter</h1>
+	<form action='/update' method='post' >
+		<input type='submit' name='Add 2' value='add'>
+		<input type='submit' name='Reset' value='reset'>
+	</form>
+	<h3>Visited {{session['count']}} times</h3>
+	
+</body>
+</html>

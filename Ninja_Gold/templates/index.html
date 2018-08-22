@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+	<div>
+		<spam>Your Gold:     </spam>
+		<input type="text" name="gold" value={{session['money']}}>
+	</div>
+	<form action="/process_money" method="post">
+		<h1>Farm</h1>
+		<p>earnes 10-20 golds</p>
+	  <input type='hidden' name='building' value='farm' />
+	  <input type="submit" value="Find Gold!"/>
+	</form>
+	<form action="/process_money" method="post">
+		<h1>Cave</h1>
+		<p>earnes 5-10 golds</p>
+	  <input type="hidden" name="building" value="cave" />
+	  <input type="submit" value="Find Gold!"/>
+	</form>
+	<form action="/process_money" method="post">
+		<h1>House</h1>
+		<p>earnes 2-5 golds</p>
+	  <input type="hidden" name="building" value="house" />
+	  <input type="submit" value="Find Gold!"/>
+	</form>
+	<form action="/process_money" method="post">
+		<h1>Casino</h1>
+		<p>earnes/takes 0-50 golds</p>
+	  <input type="hidden" name="building" value="casino" />
+	  <input type="submit" value="Find Gold!"/>
+	</form>
+	<div>
+		<h2>Activities</h2>
+		<textarea rows="20" cols="50">
+			{% for i in session['activity'] %}
+				{{ i }}
+				{% endfor %}
+
+		</textarea>
+	</div>
+
+</body>
+</html>
